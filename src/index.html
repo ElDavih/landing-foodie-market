@@ -7,13 +7,13 @@
     <title>FreshMarket - Comidas frescas</title>
   </head>
   <body>
-    <header>
+    <header class="nav-menu">
       <div class="menu">
         <button aria-label="Abrir menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -37,8 +37,8 @@
         <button aria-label="Buscar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -56,7 +56,7 @@
       </div>
     </header>
 
-    <form action="/" method="get">
+    <form action="https://google.com/search" method="get">
       <div class="input-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,9 @@
         <input
           type="text"
           id="searchmarket"
+          name="q"
           placeholder="Search for fresh food, categories, or restaurants..."
+          autocomplete="off"
         />
       </div>
     </form>
@@ -97,6 +99,74 @@
           <button>Claim Offer</button>
         </div>
       </article>
+
+      <section>
+        <header class="food-header">
+          <h2>Categories</h2>
+          <a href="#">View all</a>
+        </header>
+
+        <article class="food-categories">
+          <div class="food-pizza">
+            <a href="#" class="food-link">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8dCUr8pyY9KT-PLJ1dM3mZVjG0ZvWYFl4_9CbTZihwYnrrlEuyz3ZQloPpGL5zf9lvhWKRAAZjm4FaYz9fLX6FYJXdsiKeJOmkKlWr69P3VIK0_Ty6TtnLPbIuO3rbsOzgENIswG9TzTvDdpm5LsqR6Turkelyj933egLL2h8cCXa5MX6c-_dGEevSztnpn2f_wq04kYm0T6G1j3z8OyJT-AO42AImK5yBu3jZsm7jWEXvaNSkoSk"
+                alt="Pizza"
+              />
+              <h3>Pizza</h3>
+            </a>
+          </div>
+          <div class="food-burgers">
+            <a href="#" class="food-link">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzXQgZbwpEI3a1grveFw_hgyiFBnEjd9GRBFXrUVfSiWy2RTW69az8IaoWGnaOPqd7rVYmyA0dK53raYoihlgzocWirS_gaezcEAPVl1OyreLLZJpMAWJsH15evmZyknSXuxUguP0Ez-4kWmnFi1EnfiX40c35bqYwJtvL7taAN7J7_fApCPJ4x5V_6m2qGyDhGxLBq0UxBriPgufMKIp40mDWxj9vMZbZWPjhs76z2TKCunrAPF_J"
+                alt="Burger"
+              />
+              <h3>Burgers</h3>
+            </a>
+          </div>
+
+          <div class="food-sushi">
+            <a href="#" class="food-link">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnRd2jA4zk8nOo3tt6bTCYWRm0BwORW4uc2AcL-3QROJsFTnPe36JUwDyX5tdIbH_q7BMTJfKVl4eNTWECCENClq3FZhk_MDJz1pXPXETmo9asXjHDl3CRr9nRtZST6pOD3x-JZv6kcM70Yp7bhlaOyqcbXJSq_KjOntOB5mq1bXACGjCg2jgGS8zEVmVocOju3qv6XUNkhVff1TVACJFw8AeBZv93BMxUzabXlooFhWpxM3iSxBDX"
+                alt="Sushi"
+              />
+              <h3>Sushi</h3>
+            </a>
+          </div>
+
+          <div class="food-salads">
+            <a href="#" class="food-link">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT-FQdW4h8yiKMCE1WMyB5dI4PedOlFcI_KMBqMK2OnQ99lJbM9WIywTdi6Y_cbQrqTlrTQng5hdea7WXNYAQjTZaaxFkgryctmcJ1JiFJ9LCTQXD94bDlmCI7I1jacNgXx0pGi0rCiygI_RhefMjRRb9zE7P0nBhw1UHXwt9mWw_4PeaqUWY9FGXWb-VLaf7fQVYTM0wjysE1NKpMnpG_ZDn7QI8W5bU-5Dxt4hlrf4_f9FKs8Y1j"
+                alt="Salads"
+              />
+              <h3>Salads</h3>
+            </a>
+          </div>
+
+          <div class="food-bakery">
+            <a href="#" class="food-link">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi6z8oNgMBcs1_MSk242ArkafuzaTLI9XfzwrMkVC7zG3xeUjBOwYvkuFpITdpT8d86txEfBV8Lo8YaZV-tVtg1X-n2mkcONzCjzXtvQvnbTF9i8bBhBqq7LjSNlDesNy0IuVICDLEqjkpjSb7DXjh66ScW1gVvWO59lEdHE82RvLprs7lrUUsXO3-H4kDthFLGxAcSc-iOfRA1lhDFOBWtb2cfdnngyCmtvXiVfvsTCiXfkzjp7WK"
+                alt="Bakery"
+              />
+              <h3>Bakery</h3>
+            </a>
+          </div>
+
+          <div class="food-drinks">
+            <a href="#" class="food-link">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwEU6D-TdijVu_HA4eo4U6qSg7Hy39pjJDVubUTROF7zg-lpvGUabtAe1tEIBHAE54g3vE2Q0uND-u2gRvs7g7Vg-C7LKNpvvu_OSsMj8sUpzjLKiUHGK1cWM0ss2ZVecBXOgAqaJBHpQbz9XRcde-Mjhoja6cjbXNu_ShgZj1C2H455-2N-k5QasBBxeK0TUmtQYIkVSOj-TjJRK2q_-cRsvnxT4H4qNC2payrQ58z9MZIBv36lCp"
+                alt="Drinks"
+              />
+              <h3>Drinks</h3>
+            </a>
+          </div>
+        </article>
+      </section>
     </main>
   </body>
 </html>
