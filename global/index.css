@@ -213,6 +213,11 @@ form {
       color: var(--color-text);
       font-family: var(--text-secondary);
       font-weight: bold;
+      font-size: 1.1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -374,7 +379,11 @@ form {
 }
 
 @media (width <= 850px) {
-  header {
+  .nav-menu {
+    padding-inline: 0.5rem;
+  }
+
+  .food-section {
     padding-inline: 1.5rem;
   }
 
