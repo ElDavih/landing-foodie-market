@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-wrap: pretty;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Akt;
+  src:
+    url("../assets/fonts/Akt-VF.woff2") format("woff2"),
+    url("../assets/fonts/Akt-VF.woff") format("woff"),
+    url("../assets/fonts/Akt-VF.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: Karla;
+  src:
+    url("../assets/fonts/Karla-VF.woff2") format("woff2"),
+    url("../assets/fonts/Karla-VF.woff") format("woff"),
+    url("../assets/fonts/Karla-VF.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+:root {
+  --text-primary: "Akt", sans-serif, system-ui;
+  --text-secondary: "Karla", sans-serif, system-ui;
+  --border-transparent: rgb(0 0 0 / 12.5%);
+  --hover-button: rgb(120 120 120 / 30%);
+  --shadow-box: color-mix(in srgb, rgb(155 155 155), rgb(0 0 0));
+  --color-text: #0f5238;
+}
+
+header {
+  --size: 35px;
+
+  border-bottom: 2px solid var(--border-transparent);
+  box-shadow: 0 0 3px rgb(12 0 12 / 80%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+
+  & .logo a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--color-text);
+    font-family: var(--text-primary);
+    letter-spacing: 0.04em;
+  }
+
+  & .menu > button {
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.155s;
+
+    &:hover {
+      background-color: var(--hover-button);
+    }
+  }
+
+  & .search > button {
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--hover-button);
+    }
+  }
+}
+
+form {
+  width: 100%;
+  max-width: 90dvw;
+  margin: auto;
+  border-radius: 50px;
+  background-color: rgb(246 243 242);
+  margin-block: 2rem;
+  box-shadow: 0 1.5px 2px 1px var(--shadow-box);
+
+  & .input-container {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    padding-inline: 2rem;
+
+    & input[type="text"] {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-family: var(--text-secondary);
+    }
+  }
+
+  &:focus-within {
+    outline: 1px solid var(--border-transparent);
+  }
+}
+
+.daily-deal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 90dvw;
+  margin: auto;
+  height: 350px;
+  box-shadow: 0 0 2px 0 #000;
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(255 182 141 / 75%), rgb(255 182 141 / 75%));
+  position: relative;
+  overflow: hidden;
+
+  & .daily-deal-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  & .daily-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.5rem;
+
+    & span {
+      font-family: var(--text-secondary);
+      font-weight: bold;
+      color: var(--color-text);
+      background-color: color-mix(in srgb, var(--color-text) 20%, transparent);
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
+      align-self: flex-start;
+    }
+
+    & h1 {
+      font-family: var(--text-primary);
+      color: rgb(51 18 0);
+      font-size: 3rem;
+      line-height: 1.1em;
+      margin-block: 1rem;
+    }
+
+    & p {
+      font-family: var(--text-secondary);
+      color: rgb(51 18 0 / 90%);
+      line-height: 1.3em;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    & button {
+      font-size: 0.925rem;
+      font-weight: bold;
+      font-family: var(--text-secondary);
+      align-self: flex-start;
+      background-color: rgb(252 138 64);
+      color: rgb(51 18 0);
+      padding: 0.9rem 1.3rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease-in;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media (width <= 850px) {
+  header {
+    --size: 40px;
+
+    padding-inline: 1.5rem;
+  }
+
+  form .input-container {
+    gap: 0.4rem;
+
+    & input[type="text"] {
+      font-size: 0.9rem;
+    }
+  }
+
+  .daily-deal .daily-content h1 {
+    font-size: 2.5rem;
+  }
+}
