@@ -34,11 +34,10 @@
   --hover-button: rgb(120 120 120 / 30%);
   --shadow-box: color-mix(in srgb, rgb(155 155 155), rgb(0 0 0));
   --color-text: #0f5238;
+  --border-width: 50%;
 }
 
-header {
-  --size: 35px;
-
+.nav-menu {
   border-bottom: 2px solid var(--border-transparent);
   box-shadow: 0 0 3px rgb(12 0 12 / 80%);
   display: flex;
@@ -56,14 +55,12 @@ header {
   }
 
   & .menu > button {
-    width: var(--size);
-    height: var(--size);
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     padding: 0.5rem;
-    border-radius: 50%;
+    border-radius: var(--border-width);
     cursor: pointer;
     background-color: transparent;
     transition: background-color 0.155s;
@@ -74,15 +71,15 @@ header {
   }
 
   & .search > button {
-    width: var(--size);
-    height: var(--size);
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: transparent;
-    border-radius: 50%;
+    padding: 0.5rem;
+    border-radius: var(--border-width);
     cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.155s;
 
     &:hover {
       background-color: var(--hover-button);
@@ -91,7 +88,6 @@ header {
 }
 
 form {
-  width: 100%;
   max-width: 90dvw;
   margin: auto;
   border-radius: 50px;
@@ -117,7 +113,7 @@ form {
   }
 
   &:focus-within {
-    outline: 1px solid var(--border-transparent);
+    outline: 2px solid var(--border-transparent);
   }
 }
 
@@ -194,10 +190,189 @@ form {
   }
 }
 
+section {
+  --size: 80px;
+  --img-view: inset(10%);
+  --img-view-hover: inset(9%);
+
+  max-width: 90dvw;
+  font-family: var(--text-primary);
+  margin: 2rem auto;
+  padding: 1rem;
+
+  & .food-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & :where(a) {
+      text-decoration: none;
+      color: var(--color-text);
+      font-family: var(--text-secondary);
+      font-weight: bold;
+    }
+  }
+
+  & :where(.food-link) {
+    text-decoration: none;
+    color: #000;
+  }
+
+  & .food-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-block: 1rem;
+
+    & .food-pizza {
+      h3 {
+        text-align: center;
+        font-size: 0.9rem;
+        font-family: var(--text-secondary);
+      }
+
+      img {
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--border-width);
+        object-fit: cover;
+        transition:
+          box-shadow 0.3s ease,
+          object-view-box 0.3s ease-in-out;
+        object-view-box: inset(10%);
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgb(144 144 144);
+          object-view-box: var(--img-view-hover);
+        }
+      }
+    }
+
+    & .food-burgers {
+      h3 {
+        text-align: center;
+        font-size: 0.9rem;
+        font-family: var(--text-secondary);
+      }
+
+      img {
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--border-width);
+        object-fit: cover;
+        transition:
+          box-shadow 0.3s ease,
+          object-view-box 0.3s ease-in-out;
+        object-view-box: inset(10%);
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgb(144 144 144);
+          object-view-box: var(--img-view-hover);
+        }
+      }
+    }
+
+    & .food-sushi {
+      h3 {
+        text-align: center;
+        font-size: 0.9rem;
+        font-family: var(--text-secondary);
+      }
+
+      img {
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--border-width);
+        object-fit: cover;
+        transition:
+          box-shadow 0.3s ease,
+          object-view-box 0.3s ease-in-out;
+        object-view-box: inset(10%);
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgb(144 144 144);
+          object-view-box: var(--img-view-hover);
+        }
+      }
+    }
+
+    & .food-salads {
+      h3 {
+        text-align: center;
+        font-size: 0.9rem;
+        font-family: var(--text-secondary);
+      }
+
+      img {
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--border-width);
+        object-fit: cover;
+        transition:
+          box-shadow 0.3s ease,
+          object-view-box 0.3s ease-in-out;
+        object-view-box: inset(10%);
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgb(144 144 144);
+          object-view-box: var(--img-view-hover);
+        }
+      }
+    }
+
+    & .food-bakery {
+      h3 {
+        text-align: center;
+        font-size: 0.9rem;
+        font-family: var(--text-secondary);
+      }
+
+      img {
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--border-width);
+        object-fit: cover;
+        transition:
+          box-shadow 0.3s ease,
+          object-view-box 0.3s ease-in-out;
+        object-view-box: inset(10%);
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgb(144 144 144);
+          object-view-box: var(--img-view-hover);
+        }
+      }
+    }
+
+    & .food-drinks {
+      h3 {
+        text-align: center;
+        font-size: 0.9rem;
+        font-family: var(--text-secondary);
+      }
+
+      img {
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--border-width);
+        object-fit: cover;
+        transition:
+          box-shadow 0.3s ease,
+          object-view-box 0.3s ease-in-out;
+        object-view-box: inset(10%);
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgb(144 144 144);
+          object-view-box: var(--img-view-hover);
+        }
+      }
+    }
+  }
+}
+
 @media (width <= 850px) {
   header {
-    --size: 40px;
-
     padding-inline: 1.5rem;
   }
 
@@ -211,5 +386,9 @@ form {
 
   .daily-deal .daily-content h1 {
     font-size: 2.5rem;
+  }
+
+  .food-categories {
+    justify-content: center;
   }
 }
