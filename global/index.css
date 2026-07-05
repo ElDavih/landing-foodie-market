@@ -190,7 +190,7 @@ form {
   }
 }
 
-section {
+.food-section {
   --size: 80px;
   --img-view: inset(10%);
   --img-view-hover: inset(9%);
@@ -198,7 +198,9 @@ section {
   max-width: 90dvw;
   font-family: var(--text-primary);
   margin: 2rem auto;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   & .food-header {
     display: flex;
