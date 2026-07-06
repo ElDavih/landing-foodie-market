@@ -391,7 +391,8 @@ form {
 
   & .popular-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
 
     & .food-container {
       border: 1px solid var(--border-transparent);
@@ -401,6 +402,8 @@ form {
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      background-color: rgb(254 254 254);
+      transition: transform 0.2s ease-in;
 
       & .food-banner {
         flex-shrink: 0;
@@ -450,6 +453,10 @@ form {
 
       &:hover .food-banner img {
         object-view-box: inset(0%);
+      }
+
+      &:hover {
+        transform: scale(1.02);
       }
     }
   }
@@ -501,6 +508,14 @@ form {
     & input[type="search"] {
       font-size: 0.9rem;
     }
+  }
+
+  .popular-wrapper {
+    justify-items: center;
+  }
+
+  .popular-section header h2 {
+    text-align: center;
   }
 
   .daily-deal .daily-content h1 {
